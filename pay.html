@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#060e20",
+              "on-background": "#dee5ff",
+              "surface-dim": "#060e20",
+              "tertiary-container": "#f8a010",
+              "on-error": "#490006",
+              "outline": "#6d758c",
+              "error-dim": "#d7383b",
+              "primary": "#69daff",
+              "error-container": "#9f0519",
+              "primary-fixed": "#00cffc",
+              "on-tertiary-fixed-variant": "#563400",
+              "surface-container-highest": "#192540",
+              "tertiary-fixed-dim": "#e79400",
+              "on-error-container": "#ffa8a3",
+              "on-secondary-fixed-variant": "#6514d6",
+              "surface-bright": "#1f2b49",
+              "inverse-on-surface": "#4d556b",
+              "on-surface-variant": "#a3aac4",
+              "secondary-fixed": "#dcc9ff",
+              "surface-container-lowest": "#000000",
+              "surface-container-high": "#141f38",
+              "on-tertiary": "#573500",
+              "on-primary-fixed": "#002a35",
+              "surface": "#060e20",
+              "inverse-surface": "#faf8ff",
+              "tertiary": "#ffb148",
+              "on-tertiary-fixed": "#2a1700",
+              "secondary-fixed-dim": "#d0b8ff",
+              "on-secondary": "#2b0065",
+              "on-primary": "#004a5d",
+              "secondary": "#af88ff",
+              "primary-dim": "#00c0ea",
+              "on-secondary-container": "#e1d0ff",
+              "primary-container": "#00cffc",
+              "surface-container": "#0f1930",
+              "secondary-dim": "#8a4cfc",
+              "surface-container-low": "#091328",
+              "primary-fixed-dim": "#00c0ea",
+              "outline-variant": "#40485d",
+              "on-primary-fixed-variant": "#004a5c",
+              "inverse-primary": "#006880",
+              "surface-tint": "#69daff",
+              "error": "#ff716c",
+              "on-secondary-fixed": "#430097",
+              "on-surface": "#dee5ff",
+              "secondary-container": "#6001d1",
+              "tertiary-fixed": "#f8a010",
+              "surface-variant": "#192540",
+              "on-primary-container": "#004050",
+              "on-tertiary-container": "#4a2c00",
+              "tertiary-dim": "#e79400"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .glow-metric {
+        text-shadow: 0 0 12px rgba(105, 218, 255, 0.4);
+      }
+      .glass-panel {
+        background: rgba(31, 43, 73, 0.6);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(109, 117, 140, 0.1);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="bg-[#060e20] font-['Inter'] antialiased tracking-tight docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline/20">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="professional headshot of a young man with a friendly expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbPrzYDgRN-By3aabx4TOZzyTOWsl1vUstLJDr4gAxnY9-CfCMYSmRGt1B6UQp7Q9Fv3DYrupobs078f2Y8bqEM92nmHLSf5PCTKxFSNLkCBAnjOpNg7b2H3btBnfplKyGW52mtyr21px1YI8w0M2_L9GtGl6bQgPl-WAB8nLY6g3vFBuGEvCsK_yWNoPtsW-J5eAO8NcP_mVGJmNmgkz0AJGYG7rn1iunBymHUA3KphTTa_lAaZu1XRZq6NgueN-O_dZR16Ur_mHy"/>
+</div>
+<h1 class="text-xl font-bold tracking-tighter text-[#69daff] drop-shadow-[0_0_8px_rgba(105,218,255,0.4)]">Luminous Ledger</h1>
+</div>
+<button class="text-[#69daff] hover:bg-[#141f38] transition-colors duration-200 p-2 rounded-full active:scale-95 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="max-w-md mx-auto px-6 pt-8 space-y-8">
+<!-- Section Header -->
+<div class="space-y-1">
+<h2 class="text-2xl font-extrabold tracking-tight text-on-surface">Send &amp; Receive</h2>
+<p class="text-sm text-on-surface-variant">Transfer funds instantly across the ledger</p>
+</div>
+<!-- Main Pay Section (Obsidian Lens) -->
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+<div class="relative bg-surface-container-high p-8 rounded-xl flex flex-col items-center justify-center text-center space-y-6">
+<div class="flex items-center gap-2 bg-surface-container-lowest/40 px-4 py-2 rounded-full border border-outline/10">
+<span class="text-primary font-bold">USD</span>
+<span class="material-symbols-outlined text-primary text-sm">expand_more</span>
+</div>
+<div class="flex items-baseline justify-center">
+<span class="text-4xl font-light text-on-surface-variant mr-2">$</span>
+<span class="text-7xl font-extrabold tracking-tighter text-primary glow-metric">0.00</span>
+</div>
+<div class="w-full h-[1px] bg-gradient-to-r from-transparent via-outline/20 to-transparent"></div>
+<div class="text-sm text-on-surface-variant font-medium tracking-wide">
+                    Balance: <span class="text-on-surface">Rs.14,250.84</span>
+</div>
+</div>
+</div>
+<!-- Quick Pay Contacts -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Quick Pay</h3>
+<button class="text-xs font-semibold text-secondary hover:underline">View Contacts</button>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2 no-scrollbar">
+<!-- Contact 1 -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 active:scale-95 transition-transform">
+<div class="w-16 h-16 rounded-full p-[2px] bg-gradient-to-tr from-primary to-secondary">
+<div class="w-full h-full rounded-full border-2 border-surface bg-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a smiling woman with glasses and dark hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZyT4leeipKqqKha9nhu3uj6_XS-h0-33dKUTe3970wquF6JiHFImWVEEiKcguIP4-lIBJa428JoVsASwfreQTIWqvPzZ1c9wapi1wUSekr_x8v4eWheQa-V-6WaJF0Dx8fBCgOyg20Q0okuTO8AkI1ueoiS6ou_m_CMYmHo-2GHeEwtMOqDuOfKm9IZJeBqDFfXmSRzlr3-jufFhRThoEDg9bXEfBnXLvfksuWC1xirIkvNdpseEvJYBjxJqaBYQU6Djhaihfzds0"/>
+</div>
+</div>
+<span class="text-[11px] font-medium text-on-surface">Elena</span>
+</div>
+<!-- Contact 2 -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 active:scale-95 transition-transform">
+<div class="w-16 h-16 rounded-full p-[2px] bg-outline/20">
+<div class="w-full h-full rounded-full border-2 border-surface bg-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a man with a short beard looking directly at the camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-eb8dNMJLJASXHmIt_3DPm1yPT5UAWDS0U4e-SeT1Z9MzmwaEzKWTYH-Ax1Z78IsnBc5vgWSIdtw4_X81A-ZxFVJ2VfRDxb6Pu2ry0cVuRxx2-2UDUU9gZT9escEGSL-LLSbUxAch43-iHMX8feKWPhxLg5VL9CPVT7DRWy_auKJ8hD0qXYg0Y8aDe5J4cK4kzhcp-3juuj8b9ynaqOtQvgCjX7a9gdvEJFHIeiqyQE5vYJ7Q0gKHjSEPV1MTuxuIeexYlRY-EZZK"/>
+</div>
+</div>
+<span class="text-[11px] font-medium text-on-surface">Marcus</span>
+</div>
+<!-- Contact 3 -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 active:scale-95 transition-transform">
+<div class="w-16 h-16 rounded-full p-[2px] bg-outline/20">
+<div class="w-full h-full rounded-full border-2 border-surface bg-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="confident professional woman with tied back hair smiling in office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_4_GRZwGzoo5vFEyxhDrqKM12Rovqp6errJT4naoYF1OFwO3gshUb9Tpucv0koA4xkrG1LTz-Upw-W50cNPOvMUsTUfqrssC4huZrBGae--a03KsHQTQ-IIplHGl6hqnRwjx7XNjl8PKdmCxWsvwUl816OLUwdzt1VkU23_ayOf4IfSLOqURUL5VavcxBApN3CqxKjzU4FIOCR7QUkjSEwZuDnAkwdGlWs9iFCk-EVuTHgbhbSK_gLQ9487-gIDesm_SFk3MzxLRG"/>
+</div>
+</div>
+<span class="text-[11px] font-medium text-on-surface">Sarah</span>
+</div>
+<!-- Contact 4 -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0 active:scale-95 transition-transform">
+<div class="w-16 h-16 rounded-full p-[2px] bg-outline/20">
+<div class="w-full h-full rounded-full border-2 border-surface bg-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="young man with blonde hair smiling warmly in natural outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlalci_lCw0sEdavWnZZjIty28cu4vPKF3SAkffm6VH0gVFlrENhJ8ZqNlkqj-IEaU8XYURVHdFJZxTZxSnRBs-lf5tfYy_TVZZNxHkDgf879rLiv7-zjj7Ty32Wo8lBRxUcByjfRkSrC2BQ6LPL9mhsRHTVggQdmC2FQxK55D40ndAhRL0qkEJs8lJwplJ_tiTC9jH8wTt2tcgCRD5DGC-UFyJ8MNSMm3HLwVnp82eLwslUXPpr1dURkulC6D9PfPhLVhq_4Yf_NU"/>
+</div>
+</div>
+<span class="text-[11px] font-medium text-on-surface">Julian</span>
+</div>
+<!-- Add New -->
+<div class="flex flex-col items-center gap-2 flex-shrink-0">
+<button class="w-16 h-16 rounded-full border-2 border-dashed border-outline/30 flex items-center justify-center text-on-surface-variant hover:border-primary/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<span class="text-[11px] font-medium text-on-surface-variant">New</span>
+</div>
+</div>
+</section>
+<!-- Numeric Keypad -->
+<div class="grid grid-cols-3 gap-6 py-4">
+<button class="py-4 text-2xl font-bold text-on-surface hover:bg-surface-bright rounded-xl active:scale-90 transition-all">1</button>
+<button class="py-4 text-2xl font-bold text-on-surface hover:bg-surface-bright rounded-xl active:scale-90 transition-all">2</button>
+<button class="py-4 text-2xl font-bold text-on-surface hover:bg-surface-bright rounded-xl active:scale-90 transition-all">3</button>
+<button class="py-4 text-2xl font-bold text-on-surface hover:bg-surface-bright rounded-xl active:scale-90 transition-all">4</button>
+<button class="py-4 text-2xl font-bold text-on-surface hover:bg-surface-bright rounded-xl active:scale-90 transition-all">5</button>
+<button class="py-4 text-2xl font-bold text-on-surface hover:bg-surface-bright rounded-xl active:scale-90 transition-all">6</button>
+<button class="py-4 text-2xl font-bold text-on-surface hover:bg-surface-bright rounded-xl active:scale-90 transition-all">7</button>
+<button class="py-4 text-2xl font-bold text-on-surface hover:bg-surface-bright rounded-xl active:scale-90 transition-all">8</button>
+<button class="py-4 text-2xl font-bold text-on-surface hover:bg-surface-bright rounded-xl active:scale-90 transition-all">9</button>
+<button class="py-4 text-2xl font-bold text-on-surface hover:bg-surface-bright rounded-xl active:scale-90 transition-all">.</button>
+<button class="py-4 text-2xl font-bold text-on-surface hover:bg-surface-bright rounded-xl active:scale-90 transition-all">0</button>
+<button class="py-4 flex items-center justify-center text-on-surface-variant hover:bg-surface-bright rounded-xl active:scale-90 transition-all">
+<span class="material-symbols-outlined">backspace</span>
+</button>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-3 pb-8">
+<button class="w-full py-5 bg-gradient-to-r from-primary to-primary-fixed rounded-xl text-on-primary-container font-extrabold text-lg shadow-[0_0_20px_rgba(105,218,255,0.3)] active:scale-95 transition-transform">
+                Send Payment
+            </button>
+<button class="w-full py-5 bg-surface-variant text-on-surface font-bold rounded-xl active:scale-95 transition-transform">
+                Request Money
+            </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#060e20]/80 backdrop-blur-xl border-t border-[#6d758c]/10 shadow-[0_-4px_20px_rgba(0,0,0,0.4)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-[#a3aac4] hover:text-white transition-all active:scale-90 transition-transform duration-150" href="dashboard.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#69daff] drop-shadow-[0_0_5px_rgba(105,218,255,0.5)] active:scale-90 transition-transform duration-150" href="pay.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">Pay</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a3aac4] hover:text-white transition-all active:scale-90 transition-transform duration-150" href="stats.html">
+<span class="material-symbols-outlined">insert_chart</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#a3aac4] hover:text-white transition-all active:scale-90 transition-transform duration-150" href="profile.html">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide">Profile</span>
+</a>
+</nav>
+</body></html>
