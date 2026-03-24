@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<a href="dashboard.html">Dashboard</a>
+<a href="pay.html">Pay</a>
+<a href="stats.html">Stats</a>
+<a href="profile.html">Profile</a>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#060e20",
+              "on-background": "#dee5ff",
+              "surface-dim": "#060e20",
+              "tertiary-container": "#f8a010",
+              "on-error": "#490006",
+              "outline": "#6d758c",
+              "error-dim": "#d7383b",
+              "primary": "#69daff",
+              "error-container": "#9f0519",
+              "primary-fixed": "#00cffc",
+              "on-tertiary-fixed-variant": "#563400",
+              "surface-container-highest": "#192540",
+              "tertiary-fixed-dim": "#e79400",
+              "on-error-container": "#ffa8a3",
+              "on-secondary-fixed-variant": "#6514d6",
+              "surface-bright": "#1f2b49",
+              "inverse-on-surface": "#4d556b",
+              "on-surface-variant": "#a3aac4",
+              "secondary-fixed": "#dcc9ff",
+              "surface-container-lowest": "#000000",
+              "surface-container-high": "#141f38",
+              "on-tertiary": "#573500",
+              "on-primary-fixed": "#002a35",
+              "surface": "#060e20",
+              "inverse-surface": "#faf8ff",
+              "tertiary": "#ffb148",
+              "on-tertiary-fixed": "#2a1700",
+              "secondary-fixed-dim": "#d0b8ff",
+              "on-secondary": "#2b0065",
+              "on-primary": "#004a5d",
+              "secondary": "#af88ff",
+              "primary-dim": "#00c0ea",
+              "on-secondary-container": "#e1d0ff",
+              "primary-container": "#00cffc",
+              "surface-container": "#0f1930",
+              "secondary-dim": "#8a4cfc",
+              "surface-container-low": "#091328",
+              "primary-fixed-dim": "#00c0ea",
+              "outline-variant": "#40485d",
+              "on-primary-fixed-variant": "#004a5c",
+              "inverse-primary": "#006880",
+              "surface-tint": "#69daff",
+              "error": "#ff716c",
+              "on-secondary-fixed": "#430097",
+              "on-surface": "#dee5ff",
+              "secondary-container": "#6001d1",
+              "tertiary-fixed": "#f8a010",
+              "surface-variant": "#192540",
+              "on-primary-container": "#004050",
+              "on-tertiary-container": "#4a2c00",
+              "tertiary-dim": "#e79400"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glow-metric {
+        text-shadow: 0 0 12px rgba(105, 218, 255, 0.3);
+      }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #060e20; }
+      ::-webkit-scrollbar-thumb { background: #192540; border-radius: 10px; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="bg-[#060e20] dark:bg-[#060e20] docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center w-full px-6 py-4 font-['Inter'] antialiased tracking-tight">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a sophisticated man with a beard, studio lighting on a dark background, professional corporate headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1-TSyMatRAfeFGnq77WBf3FJy0-thfDpSFkZZ0PYzDSGtR3KMRpr88wsYMrVWrOKar-C08RXM8YUtkltzodU_h12U5n8BG-kwLVrZvOKSxz7UPAZ8-MrO8OK1OX_o_X2h3GR8oVWmyD_5R4VzlBTOeO5AsugLPptZsc-A9PTBxvlI9fgLD7wQ1hr0s_sFhvewaSY8czInV4ASATriAFtDb5dkPZ_sQnA9LJkXTYzgPxuUvzwPz9OEMM14KIJDBFxJfU3kqhdy5x3F"/>
+</div>
+<h1 class="text-xl font-bold tracking-tighter text-[#69daff] drop-shadow-[0_0_8px_rgba(105,218,255,0.4)]">Luminous Ledger</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#a3aac4] hover:bg-[#141f38] transition-colors duration-200 p-2 rounded-full active:scale-95 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-6 pt-8 space-y-10">
+<!-- Profile Header Section -->
+<section class="flex flex-col items-center md:flex-row md:items-end gap-6 md:gap-8">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-tr from-primary to-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+<div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-primary/40 p-1 bg-surface-container-low">
+<img class="w-full h-full object-cover rounded-full" data-alt="Professional studio portrait of a man in his late 30s with sharp features and a clean-shaven face against a deep navy background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0eal1ZrTj6mbu2-9MZja8797GDLpQZd48ulzrEnE9g3JtqTANc19PtueKGDWPDlK44q2YHURXAUu1H9mwaUBAV5AvbmxsfBMpbwxkbz-jIf5uMhkV57Krvv6YYmly8voXVsTXPvmUYfF6tnotwZj2rAM7c1MZI1UpcUVeiUOEuYaG8uPM7cCqm0Yakrg3jy7oNldJKHdP-QzTAEN6e7e3WrwrMtwPr-KzfyMiMU3MOGpj_p0ifR5umR7TvMnyR-vFd9WQwj3Z2CBn"/>
+</div>
+<button class="absolute bottom-1 right-1 bg-primary text-on-primary p-2 rounded-full shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<div class="text-center md:text-left space-y-1">
+<h2 class="text-4xl font-extrabold tracking-tight glow-metric text-primary">Julian Sterling</h2>
+<p class="text-on-surface-variant font-medium tracking-wide">julian.sterling@obsidian.io</p>
+<div class="inline-flex items-center px-3 py-1 bg-secondary/10 border border-secondary/20 rounded-full mt-2">
+<span class="w-2 h-2 rounded-full bg-secondary mr-2"></span>
+<span class="text-secondary text-xs font-bold tracking-widest uppercase">Obsidian Tier</span>
+</div>
+</div>
+</section>
+<!-- Account Summary Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Security Status -->
+<div class="bg-surface-container-high p-6 rounded-xl transition-all hover:bg-surface-bright cursor-pointer group border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-[10px] font-bold text-primary tracking-widest uppercase">Active</span>
+</div>
+<h3 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-1">Security Status</h3>
+<p class="text-lg font-bold text-on-surface">FaceID Enabled</p>
+<p class="text-xs text-on-surface-variant mt-2">Last checked: 2h ago</p>
+</div>
+<!-- Linked Banks -->
+<div class="bg-surface-container-high p-6 rounded-xl transition-all hover:bg-surface-bright cursor-pointer group border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-lg" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+<span class="text-[10px] font-bold text-secondary tracking-widest uppercase">3 Links</span>
+</div>
+<h3 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-1">Linked Banks</h3>
+<p class="text-lg font-bold text-on-surface">Chase, Amex, Ally</p>
+<div class="flex -space-x-2 mt-3">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center text-[10px]">C</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center text-[10px]">A</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center text-[10px]">Y</div>
+</div>
+</div>
+<!-- Membership -->
+<div class="bg-surface-container-high p-6 rounded-xl transition-all hover:bg-surface-bright cursor-pointer group border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-tertiary bg-tertiary/10 p-2 rounded-lg" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<span class="text-[10px] font-bold text-tertiary tracking-widest uppercase">VIP</span>
+</div>
+<h3 class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mb-1">Membership Level</h3>
+<p class="text-lg font-bold text-on-surface">Obsidian Tier</p>
+<p class="text-xs text-on-surface-variant mt-2">Next reward in 450 pts</p>
+</div>
+</section>
+<!-- Settings List -->
+<section class="space-y-4">
+<h3 class="text-xs font-bold text-on-surface-variant uppercase tracking-[0.2em] px-2">Account Preferences</h3>
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<!-- Personal Info -->
+<div class="flex items-center justify-between p-5 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">person</span>
+<div>
+<p class="text-sm font-bold text-on-surface">Personal Info</p>
+<p class="text-xs text-on-surface-variant">Update identity and contact details</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">chevron_right</span>
+</div>
+<!-- Security & Privacy -->
+<div class="flex items-center justify-between p-5 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">lock</span>
+<div>
+<p class="text-sm font-bold text-on-surface">Security &amp; Privacy</p>
+<p class="text-xs text-on-surface-variant">Manage 2FA and data permissions</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">chevron_right</span>
+</div>
+<!-- Notifications -->
+<div class="flex items-center justify-between p-5 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">notifications_active</span>
+<div>
+<p class="text-sm font-bold text-on-surface">Notifications</p>
+<p class="text-xs text-on-surface-variant">Alerts, summaries, and push settings</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">chevron_right</span>
+</div>
+<!-- App Appearance -->
+<div class="flex items-center justify-between p-5 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">palette</span>
+<div>
+<p class="text-sm font-bold text-on-surface">App Appearance</p>
+<p class="text-xs text-on-surface-variant">Dark mode, accent colors, and themes</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-primary tracking-tighter uppercase px-2 py-0.5 bg-primary/10 rounded">Obsidian Dark</span>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Log Out Section -->
+<section class="pt-8 pb-12 flex flex-col items-center">
+<button class="flex items-center gap-3 px-8 py-4 bg-surface-container-highest rounded-xl text-error font-bold tracking-tight hover:bg-error/10 active:scale-95 transition-all duration-200 group">
+<span class="material-symbols-outlined group-hover:rotate-12 transition-transform">logout</span>
+                Log Out
+            </button>
+<p class="mt-6 text-[10px] text-on-surface-variant tracking-[0.3em] uppercase opacity-50">Luminous Ledger v4.2.0 • Build 882</p>
+</section>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="bg-[#060e20]/80 backdrop-blur-xl dark:bg-[#060e20]/80 fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 border-t border-[#6d758c]/10 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
+<a class="flex flex-col items-center justify-center text-[#a3aac4] font-['Inter'] text-[11px] font-medium tracking-wide hover:text-white transition-all active:scale-90 duration-150" href="dashboard.html">
+<span class="material-symbols-outlined mb-1">home</span>
+            Home
+        </a>
+<a class="flex flex-col items-center justify-center text-[#a3aac4] font-['Inter'] text-[11px] font-medium tracking-wide hover:text-white transition-all active:scale-90 duration-150" href="pay.html">
+<span class="material-symbols-outlined mb-1">payments</span>
+            Pay
+        </a>
+<a class="flex flex-col items-center justify-center text-[#a3aac4] font-['Inter'] text-[11px] font-medium tracking-wide hover:text-white transition-all active:scale-90 duration-150" href="stats.html">
+<span class="material-symbols-outlined mb-1">insert_chart</span>
+            Stats
+        </a>
+<a class="flex flex-col items-center justify-center text-[#69daff] drop-shadow-[0_0_5px_rgba(105,218,255,0.5)] font-['Inter'] text-[11px] font-medium tracking-wide hover:text-white transition-all active:scale-90 duration-150" href="profile.html">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span>
+            Profile
+        </a>
+</nav>
+</body></html>
